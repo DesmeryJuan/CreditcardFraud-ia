@@ -1,0 +1,55 @@
+> base=read.csv("cardfraud.csv")
+> head(base)
+  distance_from_home distance_from_last_transaction
+1          57.877857                      0.3111400
+2          10.829943                      0.1755915
+3           5.091079                      0.8051526
+4           2.247564                      5.6000435
+5          44.190936                      0.5664863
+6           5.586408                     13.2610733
+  ratio_to_median_purchase_price repeat_retailer used_chip used_pin_number
+1                     1.94593998               1         1               0
+2                     1.29421881               1         0               0
+3                     0.42771456               1         0               0
+4                     0.36266258               1         1               0
+5                     2.22276730               1         1               0
+6                     0.06476847               1         0               0
+  online_order fraud
+1            0     0
+2            0     0
+3            1     0
+4            1     0
+5            1     0
+6            0     0
+> summary(base)
+ distance_from_home  distance_from_last_transaction
+ Min.   :    0.005   Min.   :    0.000             
+ 1st Qu.:    3.878   1st Qu.:    0.297             
+ Median :    9.968   Median :    0.999             
+ Mean   :   26.629   Mean   :    5.037             
+ 3rd Qu.:   25.744   3rd Qu.:    3.356             
+ Max.   :10632.724   Max.   :11851.105             
+ ratio_to_median_purchase_price repeat_retailer    used_chip     
+ Min.   :  0.0044               Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:  0.4757               1st Qu.:1.0000   1st Qu.:0.0000  
+ Median :  0.9977               Median :1.0000   Median :0.0000  
+ Mean   :  1.8242               Mean   :0.8815   Mean   :0.3504  
+ 3rd Qu.:  2.0964               3rd Qu.:1.0000   3rd Qu.:1.0000  
+ Max.   :267.8029               Max.   :1.0000   Max.   :1.0000  
+ used_pin_number   online_order        fraud       
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.0000   Median :1.0000   Median :0.0000  
+ Mean   :0.1006   Mean   :0.6506   Mean   :0.0874  
+ 3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+> str(base)
+'data.frame':   1000000 obs. of  8 variables:
+ $ distance_from_home            : num  57.88 10.83 5.09 2.25 44.19 ...
+ $ distance_from_last_transaction: num  0.311 0.176 0.805 5.6 0.566 ...
+ $ ratio_to_median_purchase_price: num  1.946 1.294 0.428 0.363 2.223 ...
+ $ repeat_retailer               : num  1 1 1 1 1 1 1 1 0 1 ...
+ $ used_chip                     : num  1 0 0 1 1 0 0 0 0 0 ...
+ $ used_pin_number               : num  0 0 0 0 0 0 0 1 0 0 ...
+ $ online_order                  : num  0 0 1 1 1 0 1 0 0 1 ...
+ $ fraud                         : num  0 0 0 0 0 0 0 0 0 0 ...
